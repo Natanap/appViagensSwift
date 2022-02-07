@@ -15,19 +15,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOl-q3-hiV" userLabel="Header View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <rect key="frame" x="-293" y="0.0" width="1000" height="250"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alura Viagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5w-a1-Czb">
-                            <rect key="frame" x="20" y="46" width="149" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alura Viagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5w-a1-Czb">
+                            <rect key="frame" x="314" y="48" width="149" height="33"/>
                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="35"/>
+                            </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.11764705882352941" green="0.23137254901960785" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="cXJ-Y9-Lf8"/>
+                        <constraint firstAttribute="width" constant="1000" id="g2U-fq-uLh"/>
+                        <constraint firstItem="N5w-a1-Czb" firstAttribute="top" secondItem="wOl-q3-hiV" secondAttribute="top" constant="48" id="v7f-Sf-DuG"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7I-4T-GUT" userLabel="Banner View">
@@ -41,19 +45,29 @@
                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproveite o verão, com:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxQ-Ac-7n6">
                                     <rect key="frame" x="16" y="14" width="168" height="62"/>
                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="22"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="27"/>
+                                    </variation>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="XxQ-Ac-7n6" firstAttribute="leading" secondItem="Zry-TA-2rA" secondAttribute="leading" constant="16" id="0bs-rz-Vgf"/>
-                                <constraint firstAttribute="bottom" secondItem="qcC-gV-H2e" secondAttribute="bottom" constant="14" id="4Ko-aY-lVn"/>
-                                <constraint firstItem="XxQ-Ac-7n6" firstAttribute="top" secondItem="Zry-TA-2rA" secondAttribute="top" constant="14" id="PUp-uM-IpZ"/>
+                                <constraint firstAttribute="bottom" secondItem="qcC-gV-H2e" secondAttribute="bottom" constant="14" id="4Ko-aY-lVn">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                </constraint>
+                                <constraint firstItem="XxQ-Ac-7n6" firstAttribute="top" secondItem="Zry-TA-2rA" secondAttribute="top" constant="14" id="PUp-uM-IpZ">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                </constraint>
                                 <constraint firstAttribute="trailing" secondItem="qcC-gV-H2e" secondAttribute="trailing" constant="16" id="ZwB-SE-ABn"/>
                                 <constraint firstAttribute="trailing" secondItem="XxQ-Ac-7n6" secondAttribute="trailing" constant="16" id="iJE-YB-mLA"/>
                                 <constraint firstItem="qcC-gV-H2e" firstAttribute="leading" secondItem="Zry-TA-2rA" secondAttribute="leading" constant="16" id="taJ-xs-927"/>
@@ -80,11 +94,11 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="wOl-q3-hiV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Jfk-3f-bc6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="m7I-4T-GUT" secondAttribute="trailing" constant="20" id="LUh-hN-9Vc"/>
                 <constraint firstItem="m7I-4T-GUT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="19" id="M6P-qg-P19"/>
-                <constraint firstItem="wOl-q3-hiV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S43-dy-2fL"/>
+                <constraint firstItem="N5w-a1-Czb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="21" id="RgA-V4-5PV"/>
                 <constraint firstItem="wOl-q3-hiV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zay-IY-jaB"/>
+                <constraint firstItem="wOl-q3-hiV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="g8F-Bt-bDU"/>
                 <constraint firstItem="m7I-4T-GUT" firstAttribute="bottom" secondItem="wOl-q3-hiV" secondAttribute="bottom" constant="10" id="jyP-Wv-eGD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

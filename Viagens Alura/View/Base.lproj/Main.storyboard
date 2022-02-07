@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,21 +13,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Viagens_Alura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-0m-24F">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-0m-24F" userLabel="viagens Table View">
+                                <rect key="frame" x="0.0" y="44" width="390" height="800"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gjV-0m-24F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WYG-ep-XpK"/>
-                            <constraint firstItem="gjV-0m-24F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a0s-6B-1Bt"/>
-                            <constraint firstAttribute="bottom" secondItem="gjV-0m-24F" secondAttribute="bottom" id="jjN-Mc-yEH"/>
-                            <constraint firstItem="gjV-0m-24F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kJ6-Qx-1Hf"/>
+                            <constraint firstItem="gjV-0m-24F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Rx-JP-UjI"/>
+                            <constraint firstItem="gjV-0m-24F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GCl-e3-bQ7"/>
+                            <constraint firstItem="gjV-0m-24F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J3a-Zh-gdn"/>
+                            <constraint firstAttribute="bottom" secondItem="gjV-0m-24F" secondAttribute="bottom" id="uPd-OZ-tiv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.536231884057973" y="66.964285714285708"/>
+            <point key="canvasLocation" x="26.153846153846153" y="66.824644549763036"/>
         </scene>
     </scenes>
     <resources>
