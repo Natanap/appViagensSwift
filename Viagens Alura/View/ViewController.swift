@@ -54,11 +54,12 @@ extension  ViewController: UITableViewDataSource {
             
         case .ofertas:
             
-            guard let celularOferta = tableView.dequeueReusableCell(withIdentifier: "OfertaTableViewCell") as? OfertaTableViewCell else {fatalError ("erro to create oferta")
+            guard let celulaOferta = tableView.dequeueReusableCell(withIdentifier: "OfertaTableViewCell") as? OfertaTableViewCell else {fatalError ("erro to create oferta")
                 
             }
             
-            return celularOferta
+            celulaOferta.configuraCelula(viewModel?.viagens)
+            return celulaOferta
             
         default:
             return UITableViewCell()
@@ -69,6 +70,10 @@ extension  ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detalheController = DetalheViewController (nibName: "DetalheViewController", bundle: nil)
+        navigationController?.pushViewController(detalheController, animated: true)
+    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         if section == 0 {
