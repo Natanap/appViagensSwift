@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol OfertaTableViewCellDelegate: AnyObject {
+    func didSelectView (_ viagem: Viagem?)
+}
+
 class ViewController: UIViewController {
    
 
@@ -25,6 +29,13 @@ class ViewController: UIViewController {
         viagensTableView.dataSource = self
         viagensTableView.delegate = self
         
+    }
+    
+    func irParaDetalhe(_ viagem: Viagem?) {
+        if let viagemSelecionada = viagem {
+            let detalheController = DetalheViewController.instanciar(viagemSelecionada)
+            navigationController?.pushViewController(detalheController, animated: true)
+        }
     }
 }
 
@@ -57,7 +68,7 @@ extension  ViewController: UITableViewDataSource {
             guard let celulaOferta = tableView.dequeueReusableCell(withIdentifier: "OfertaTableViewCell") as? OfertaTableViewCell else {fatalError ("erro to create oferta")
                 
             }
-            
+            celulaOferta.delegate = self
             celulaOferta.configuraCelula(viewModel?.viagens)
             return celulaOferta
             
@@ -71,8 +82,18 @@ extension  ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detalheController = DetalheViewController (nibName: "DetalheViewController", bundle: nil)
-        navigationController?.pushViewController(detalheController, animated: true)
+        
+        let viewModel = secaoDeViagens?[indexPath.section]
+        
+        switch viewModel?.tipo {
+        case .destaques, .internacionais:
+            let viagemSelecionada = viewModel?.viagens [indexPath.row]
+            irParaDetalhe(viagemSelecionada)
+        default:
+            break
+        }
+        
+       
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -96,5 +117,11 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 400 : 475
 
+    }
+}
+
+extension ViewController: OfertaTableViewCellDelegate {
+    func didSelectView(_ viagem: Viagem?) {
+        irParaDetalhe(viagem)
     }
 }
